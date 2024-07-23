@@ -19,9 +19,7 @@ This is a logistics management system built with Flask, SQLAlchemy, and Flask-Lo
   - [Admin Login](#admin-login)
 - [Email Notifications](#email-notifications)
 - [Admin Interface](#admin-interface)
-- [Directory Structure](#directory-structure)
 - [Contributing](#contributing)
-- [License](#license)
 
 ## Features
 
@@ -112,4 +110,7 @@ The admin can manage dispatches and view booking details. The admin interface in
 - Viewing all bookings
 - Dispatch management
 
-## Directory Structure
+## Contributing
+
+Feel free to fork the repository and submit pull requests. For major changes, please open an issue first to discuss what you would like to change.
+
