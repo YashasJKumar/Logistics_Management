@@ -39,8 +39,8 @@ Ensure you have Python installed. The required packages are specified in `requir
 
 1. **Clone the repository:**
     ```sh
-    git clone https://github.com/your-username/logistics-management.git
-    cd logistics-management
+    git clone https://github.com/YashasJKumar/Logistics-Management.git
+    cd Logistics-Management
     ```
 
 2. **Create and activate a virtual environment:**
