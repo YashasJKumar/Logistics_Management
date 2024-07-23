@@ -2,7 +2,7 @@
 
 This is a logistics management system built with Flask, SQLAlchemy, and Flask-Login. The application allows users to register, log in, and manage bookings. An admin interface is also provided for dispatch management.
 
-![image](https://www.google.com/url?sa=i&url=https%3A%2F%2Fengineering.backmarket.com%2Fbuilding-resilient-microservices-communication-a-guide-to-sdk-generation-project-b449c06ef68e&psig=AOvVaw0Q20vsiUJsRrNMQbql8xe7&ust=1721838261422000&source=images&cd=vfe&opi=89978449&ved=0CBAQjRxqFwoTCNixlsfJvYcDFQAAAAAdAAAAABAf)
+![image](https://miro.medium.com/v2/resize:fit:1400/1*wuG1_riJHs3hKFVHnMGB2w.gif)
 
 
 ## Table of Contents
