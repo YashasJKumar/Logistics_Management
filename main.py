@@ -6,16 +6,17 @@ from flask_sqlalchemy import SQLAlchemy
 from flask_login import UserMixin, login_user, LoginManager, login_required, current_user, logout_user
 import smtplib
 import csv
+import markdown
 from merger import parser
 
 app = Flask(__name__)
 app.config['SECRET_KEY'] = 'secret-key-goes-here'
 
-EMAIL = 'njsreactdom@gmail.com'
-PASSWORD = 'vaweeqqzwmjakwoj'
+EMAIL = '<your-email-here>'
+PASSWORD = 'your-password-here'
 
 # CONNECT TO DB
-app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///users.db'
+app.config['SQLALCHEMY_DATABASE_URI'] = '<your-database-url-here>'
 db = SQLAlchemy()
 db.init_app(app)
 
@@ -168,7 +169,8 @@ def dispatch():
         get_response()
         try:
             with open('answer.txt', 'r') as file:
-                content = file.read()
+                markdown_content = file.read()
+            content = markdown.markdown(markdown_content)
         except FileNotFoundError:
             content = "File not found."
         with open("data.csv", mode='w') as file:

@@ -41,7 +41,7 @@ def parser(customer_data):
         source = normalize_city_name(customer['Source'].capitalize())
         destination = normalize_city_name(customer['Destination'].capitalize())
         distance = distance_dict.get((source, destination), '-1')
-        customer['Distance'] = distance
+        customer['Distance'] = distance + " km."
         merged_data.append(customer)
 
 # Write the merged data to a new CSV file
