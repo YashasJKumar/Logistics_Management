@@ -1,0 +1,10 @@
+{% extends "base.html" %}
+{% block content %}
+
+<div class="box">
+    <h2>Your Booking has been confirmed.You must have received confirmation to your email</h2>
+  <a href="{{ url_for('home')}}">
+        <button type="submit" class="btn btn-primary btn-block btn-large">Return Home.</button>
+  </a>
+</div>
+{% endblock %}

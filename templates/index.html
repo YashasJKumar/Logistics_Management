@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Logistic Fleet Management</title>
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='css/styles.css')}}"
+    />
+    <style>
+      body {
+        margin: 0;
+        padding: 0;
+        background-image: url('../static/trucks1.gif'); /* Replace with your image path */
+        background-size: cover; /* This makes the image cover the entire background */
+        background-repeat: no-repeat; /* Prevents the image from repeating */
+        background-position: center; /* Centers the image */
+        height: 100vh;
+      }
+    </style>
+  </head>
+
+  <body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+      <a class="navbar-brand" href="/Logistics_Management/static">Logistic Fleet Management</a>
+      <div class="collapse navbar-collapse">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item">
+            <a class="nav-link" href="{{ url_for('home') }}">Home</a>
+          </li>
+          <!-- Hide the Login/Registration navigation for logged-in users -->
+          {% if not logged_in: %}
+          <li class="nav-item">
+            <a class="nav-link" href="{{ url_for('login') }}">Login</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="{{ url_for('register') }}">Register</a>
+          </li>
+          {% endif %}
+          {% if logged_in: %}
+          <li class="nav-item">
+            <a class="nav-link" href="{{ url_for('secrets') }}">Book Cargo</a>
+          </li>
+          {% endif %}
+          <li class="nav-item">
+            <a class="nav-link" href="{{ url_for('logout') }}">Log Out</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+<div class="box">
+  <h1>AI Powered Logistics Planning</h1>
+  <br>
+  <h5>(Powered by Mixtral 8X7B)</h5>
+  <!-- Hide the Login/Registration buttons for logged-in users -->
+
+  {% if not logged_in: %}
+  <a href="{{ url_for('login') }}" class="btn btn-primary btn-block btn-large"
+    >Login</a
+  >
+  <a
+    href="{{ url_for('register') }}"
+    class="btn btn-secondary btn-block btn-large"
+    >Register</a
+  >
+  {% endif %}
+  <!-- Feedback for logged-in users -->
+</div>
+    </body>
+</html>

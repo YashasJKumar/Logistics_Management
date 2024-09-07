@@ -1,0 +1,11 @@
+{% extends "base.html" %}
+{% block content %}
+
+<div class="box">
+    <h2>Admin Panel</h2>
+  <a href="{{ url_for('dispatch')}}">
+        <button type="submit" class="btn btn-primary btn-block btn-large">Dispatch Lorry.</button>
+  </a>
+</div>
+
+{% endblock %}
